@@ -201,6 +201,14 @@ namespace UMP_Plugin {
 			UpdateAttachments();
 		}
 
+		new private void Update() {
+			float amount = slide.amount;
+
+			base.Update();
+
+			if (slide.amount == 0.7f && amount < 0.7f) ModAudioManager.PlayOneShotAttached(sound_press_check_start, this.gameObject);
+		}
+
 		public override void UpdateGun() {
 			firing_modes[0].sound_event_path = sound_safety_on;
 			firing_modes[1].sound_event_path = sound_safety_on;
@@ -255,9 +263,6 @@ namespace UMP_Plugin {
 			}
 
 			ApplyTransform("charging_handle", m_charging_handle_amount, slide_stop.transform);
-
-			//ApplyTransform("magazine_catch_animation", magazine_catch.amount, magazine_catch.transform);
-			//ApplyTransform(select_fire_animation_path, _select_fire.amount, select_fire_component);
 
 			hammer.UpdateDisplay();
 
