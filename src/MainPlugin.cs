@@ -1,13 +1,11 @@
 ﻿using System.IO;
 using System.Collections.Generic;
 using UnityEngine;
-using Receiver2;
 using BepInEx;
-using R2CustomSounds;
-using HarmonyLib;
 
 namespace UMP_Plugin {
-	[BepInPlugin("pl.szikaka.UMP", "UMP Plugin", "1.0.0")]
+	[BepInDependency("pl.szikaka.receiver_2_modding_kit")]
+	[BepInPlugin("pl.szikaka.UMP", "UMP Plugin", "1.0.2")]
 	public class MainPlugin : BaseUnityPlugin {
 		public static MainPlugin instance {
 			get;
@@ -38,7 +36,6 @@ namespace UMP_Plugin {
 				if (assets_request.asset != null) {
 					Debug.Log("Loaded attachement");
 
-					//attachments.AddRange(((Attachments.ModularAttachmentsList) assets_request.asset).attachments);
 					foreach (var att in ((Attachments.ModularAttachmentsList) assets_request.asset).attachments) {
 						attachments.Add(att.name, att);
 					}
@@ -49,9 +46,7 @@ namespace UMP_Plugin {
 		}
 
 		private void Awake() {
-			Logger.LogInfo("Loaded plugin UMP-Plugin!");
-
-			ModAudioManager.LoadCustomEvents("h&k_ump", Path.Combine(Application.persistentDataPath, "Guns", folder_name, "Sounds"));
+			Logger.LogInfo("Plugin for UMP Gun is loaded!");
 
 			instance = this;
 		}

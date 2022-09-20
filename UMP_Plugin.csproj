@@ -31,15 +31,12 @@
     <Reference Include="ImGui">
       <HintPath>lib\Receiver2ModdingKit\ImGui.dll</HintPath>
     </Reference>
-    <Reference Include="R2CustomSounds">
-      <HintPath>lib\CustomSounds\R2CustomSounds.dll</HintPath>
-    </Reference>
-    <Reference Include="Receiver2ModdingKit">
-      <HintPath>..\..\..\..\..\Gry\Steam\steamapps\common\Receiver 2\BepInEx\plugins\Receiver2ModdingKit\net46\Receiver2ModdingKit.dll</HintPath>
-    </Reference>
     <Reference Include="SimpleJSON">
       <HintPath>lib\Receiver2ModdingKit\SimpleJSON.dll</HintPath>
     </Reference>
+	<Reference Include="Receiver2ModdingKit">
+		<HintPath>lib\Receiver2ModdingKit.dll</HintPath>
+	</Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>lib\Unity.TextMeshPro.dll</HintPath>
     </Reference>
@@ -52,6 +49,6 @@
   </ItemGroup>
   
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="cp &quot;$(TargetPath)&quot; &quot;H:\unity_projekt\Receiver Mods\Assets\DLLs\Injection\UMP&quot;" />
+    <Exec Command="xcopy &quot;$(TargetPath)&quot; &quot;E:\unity_projekt\Receiver Mods\Assets\DLLs\Injection\UMP&quot; /Y" />
   </Target>
 </Project>

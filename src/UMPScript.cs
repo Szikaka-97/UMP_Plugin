@@ -1,12 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.IO;
 using UnityEngine;
 using Receiver2;
 using RewiredConsts;
 using Receiver2ModdingKit;
-using R2CustomSounds;
-using ImGuiNET;
 
 namespace UMP_Plugin {
 	public class UMPScript : ModGunScript {
@@ -206,7 +203,7 @@ namespace UMP_Plugin {
 
 			base.Update();
 
-			if (slide.amount == 0.7f && amount < 0.7f) ModAudioManager.PlayOneShotAttached(sound_press_check_start, this.gameObject);
+			if (slide.amount == 0.7f && amount < 0.7f) AudioManager.PlayOneShotAttached(sound_press_check_start, this.gameObject);
 		}
 
 		public override void UpdateGun() {
@@ -285,5 +282,3 @@ namespace UMP_Plugin {
 		}
 	}
 }
-
-//Halo sight shader from https://vazgriz.com/158/reflex-sight-shader-in-unity3d/

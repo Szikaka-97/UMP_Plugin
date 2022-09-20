@@ -1,6 +1,5 @@
 ﻿using System;
 using UnityEngine;
-using Receiver2;
 
 namespace UMP_Plugin.Attachments {
 	public class ModularAttachmentPoint : MonoBehaviour {

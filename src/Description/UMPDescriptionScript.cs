@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
@@ -14,7 +11,6 @@ namespace UMP_Plugin.Description {
 		public static UMPDescriptionScript instance;
 
 		public GameObject rotating_object;
-		//public Camera view_camera;
 
 		public TMP_Dropdown barrel_dropdown;
 		public TMP_Dropdown bottom_rail_dropdown;
