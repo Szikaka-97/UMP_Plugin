@@ -5,7 +5,7 @@ using BepInEx;
 
 namespace UMP_Plugin {
 	[BepInDependency("pl.szikaka.receiver_2_modding_kit")]
-	[BepInPlugin("pl.szikaka.UMP", "UMP Plugin", "1.0.2")]
+	[BepInPlugin("pl.szikaka.UMP", "UMP Plugin", "1.0.3")]
 	public class MainPlugin : BaseUnityPlugin {
 		public static MainPlugin instance {
 			get;
